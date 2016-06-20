@@ -21,6 +21,7 @@ open localhost:8888/graphql
 ## IMPORTANT
 Application Setup
 its accessing openweather API and Youtube API so just add them in keys dir 
+
 ```
 const API_KEYS = {
   youtube: "YOUR YOUTUBE KEY HERE",
@@ -41,6 +42,7 @@ Below is a query to get query all the available fields in the current setup.  Th
 ![GraphQL App](snaps/app1.png)
 ![GraphQL App](snaps/app2.png)
 ![GraphQL App](snaps/app3.png)
+
 ```
 query {
   weatherForecast(city:"Seattle") {
@@ -142,9 +144,6 @@ Now another query fetch data from both rest API together
 ```
 
 ```
-**UPDATE**.  I have added more fields to the GraphQL schema to make the react components do less work.  I added fields that only bring in the array data for the fields I need and calculates the averages for me.  I no longer need to map over an array of objects to get the data I need or calculate the averages for the charts.  I just pass in data and it is used as-is.  The components are dumber and that is a good thing.
-
-```
 query: `
 {
   weatherForecast(city:"${term}") {
@@ -200,8 +199,9 @@ query {
 
   }
 }
-# the sample app I plan will not require half of those fields, maybe just 4-5 of them!
 ```
+
+
 Contact
 ====================
 [<img src="https://s3-us-west-2.amazonaws.com/martinsocial/MARTIN2.png" />](http://gennexttraining.herokuapp.com/)
